@@ -1,3 +1,5 @@
+#import modules
+
 from googleseacrh import search
 from colorama import Fore, init
 init()
@@ -37,23 +39,23 @@ dec_web_server = "“SquirrelMail version 1.4.4” inurl:src ext:php"
 hard_dev = "camera linksys inurl:main.cgi"
 
 option = int(input("Choose an option: "))
-
+#searching with the googlesearch module.
 if option==1:
-	for i in search(user_admins, start = 0, pause = 2):
+	for i in search(user_admins, start = 0, num = 30 , pause = 2):
 		print(i)
 
 if option==2:
-	for i in search(L_forms, start = 0, pause = 2):
+	for i in search(L_forms, start = 0, num = 30, pause = 2):
 		print(i)
 
 if option==3:
-	for i in search(f_use_names, start = 0, pause = 2):
+	for i in search(f_use_names, start = 0, num = 30, pause = 2):
 		print(i)
 
 if option==4:
-	for i in search(dec_web_server, start = 0, pause = 2):
+	for i in search(dec_web_server, start = 0, num = 30, pause = 2):
 		print(i)
 
 if option==5:
-	for i in search(hard_dev, start = 0, pause = 2):
+	for i in search(hard_dev, start = 0, num = 30, pause = 2):
 		print(i)
