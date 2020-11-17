@@ -1,0 +1,3 @@
+pip install googlesearch
+pip install colorama
+pip install bs4
