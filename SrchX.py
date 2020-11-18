@@ -28,6 +28,8 @@ Menu = """
 3- Files with user names or error messages that reveal the username.
 4- Detection of the web server version or vulnerable product.
 5- Hardware devices online(cameras, prints, etc).
+6- Sensitive directories on a server.
+7- Information to support access.
 """
 print(Menu)
 
@@ -37,6 +39,8 @@ L_forms = "inurl:/admin/login.asp"
 f_use_names = "“access denied for user” “using password” “general error” -inurl:phpbb “sql error”"
 dec_web_server = "“SquirrelMail version 1.4.4” inurl:src ext:php"
 hard_dev = "camera linksys inurl:main.cgi"
+sen_fic = "“phone  * * *” “address *” “e-mail” intitle:”curriculum vitae”"
+Inf_SA = "inurl:”:8080″ -intext:8080"
 
 option = int(input("Choose an option: "))
 #searching with the googlesearch module.
@@ -58,4 +62,14 @@ if option==4:
 
 if option==5:
 	for i in search(hard_dev, start = 0, num = 30, pause = 2):
+		print(i)
+
+
+if option==6:
+	for i in search(sen_fic, start = 0, num = 30, pause = 2):
+		print(i)
+		
+
+if option==7:
+	for i in search(Inf_SA, start = 0, num = 30, pause = 2):
 		print(i)
