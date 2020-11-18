@@ -1,3 +1,0 @@
-googlesearch
-colorama
-bs4
