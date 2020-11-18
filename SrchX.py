@@ -1,6 +1,6 @@
 #import modules
 
-from googleseacrh import search
+from googlesearch import search
 from colorama import Fore, init
 init()
 print(Fore.GREEN)
