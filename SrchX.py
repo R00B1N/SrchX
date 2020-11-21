@@ -1,9 +1,7 @@
-#import modules
-
 from googlesearch import search
 from colorama import Fore, init
 init()
-print(Fore.GREEN)
+print(Fore.CYAN)
 
 import time
 time.sleep(1)
@@ -30,6 +28,7 @@ Menu = """
 5- Hardware devices online(cameras, prints, etc).
 6- Sensitive directories on a server.
 7- Information to support access.
+8- IP info Gathering.
 """
 print(Menu)
 
@@ -46,30 +45,64 @@ option = int(input("Choose an option: "))
 #searching with the googlesearch module.
 if option==1:
 	for i in search(user_admins, start = 0, num = 30 , pause = 2):
+		print(Fore.GREEN)
 		print(i)
 
 if option==2:
 	for i in search(L_forms, start = 0, num = 30, pause = 2):
+		print(Fore.CYAN)
 		print(i)
 
 if option==3:
 	for i in search(f_use_names, start = 0, num = 30, pause = 2):
+		print(Fore.MAGENTA)
 		print(i)
 
 if option==4:
 	for i in search(dec_web_server, start = 0, num = 30, pause = 2):
+		print(Fore.RED)
 		print(i)
 
 if option==5:
 	for i in search(hard_dev, start = 0, num = 30, pause = 2):
+		print(Fore.YELLOW)
 		print(i)
 
 
 if option==6:
 	for i in search(sen_fic, start = 0, num = 30, pause = 2):
+		print(Fore.WHITE)
 		print(i)
 		
 
 if option==7:
 	for i in search(Inf_SA, start = 0, num = 30, pause = 2):
+		print(Fore.BLUE)
 		print(i)
+
+
+if option==8:
+	import urllib.request
+	import json
+	from colorama import Fore, init
+	init()
+	
+
+	banner = """
+	00000000000000000000000000000000000000000000000000
+	0             IPI info gathering                 0
+	00000000000000000000000000000000000000000000000000
+	By: Blacksterhack.
+	"""
+	print(banner)
+
+	ip = str(input("Type your IP here: "))
+	srch = "https://ipinfo.io/"+ip+"/json"
+
+	url = urllib.request.urlopen(srch)
+	load = json.loads(url.read())
+	print(Fore.MAGENTA)
+
+
+	for date in load:
+		print(date + ">>>>" +  load[date])
