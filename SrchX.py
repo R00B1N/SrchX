@@ -117,6 +117,7 @@ if option==9:
 	0           Gmail BruteForce          0
 	000000000000000000000000000000000000000
 	By: Blacksterhack.
+	Use VPN or you will be Banned.
 	"""
 	print(banner)
 	gmail_server = smtplib.SMTP("smtp.gmail.com", 587)
