@@ -20,6 +20,10 @@ pip install colorama
 
 pip install bs4
 
+pip install json
+
+pip install urllib.request
+
 
 EXECUTION
 
