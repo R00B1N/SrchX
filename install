@@ -1,0 +1,13 @@
+#!/bin/bash
+echo "Now, you are going to install SrchX in ypur system"
+pip install googlesearch
+sleep 1s
+pip install colorama
+sleep 1s
+pip install bs4
+sleep 1s
+pip install json
+sleep 1s
+pip install urllib.request
+sleep 1s
+echo "Now, you can run this script in your terminal"

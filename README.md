@@ -1,10 +1,7 @@
 # SrchX
 SrchX Google dorks advanced and others tools.
-donate me for still learning and developing
 
-paypal.me/Blacksterhack
-
-Installing
+__Install__
 
 pkg install python
 
@@ -14,18 +11,9 @@ git clone https://github.com/Blacksterhack/SrchX
 
 cd SrchX
 
-pip install googlesearch
+./install
 
-pip install colorama
-
-pip install bs4
-
-pip install json
-
-pip install urllib.request
-
-
-EXECUTION
+__EXECUTION__
 
 type only:
 
